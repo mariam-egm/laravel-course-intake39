@@ -16,7 +16,7 @@
 
          <div class="form-group">
             <label for="exampleInputPassword1">Post Creator</label>
-            <select class="form-control">
+            <select class="form-control" name="user_id">
                 @foreach($users as $user)
                     <option value="{{$user->id}}">{{$user->name}}</option>
                 @endforeach
