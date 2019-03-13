@@ -1,3 +1,8 @@
-<h1>Hello Posts</h1>
+<html>
 
-<h1>{{ $myName }}</h1>
+    <body>
+        <h1>Hello Posts</h1>
+
+        <h1>{{ $myName }}</h1>
+    </body>
+</html>
