@@ -12,11 +12,13 @@
     </tr>
   </thead>
   <tbody>
+    @foreach($posts as $post)
     <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
+      <th scope="row">{{$post->id}}</th>
+      <td>{{$post->title}}</td>
+      <td>{{$post->description}}</td>
     </tr>
+    @endforeach
 
   </tbody>
 </table>
