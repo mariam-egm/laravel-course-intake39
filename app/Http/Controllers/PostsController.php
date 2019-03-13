@@ -32,4 +32,16 @@ class PostsController extends Controller
 
         return redirect()->route('posts.index');
     }
+
+    public function edit($post)
+    {
+        // $post = Post::where('id',$post)->get()->first();
+        //select * from posts where id=1 limit 1;
+        // $post = Post::where('id',$post)->first();
+        // $post = Post::find($post);
+        $post = Post::findOrFail($post);
+        return view('posts.edit',[
+            'post' => $post,
+        ]);
+    }
 }
