@@ -6,8 +6,10 @@ use Illuminate\Http\Request;
 
 class PostsController extends Controller
 {
-    public function renderPosts()
+    public function index()
     {
-        return view('posts');
+        return view('posts.index',[
+            'myName' => 'Ahmed Moahamed'
+        ]);
     }
 }
