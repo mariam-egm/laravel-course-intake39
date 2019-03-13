@@ -1,6 +1,8 @@
  @extends('layouts.app')
 
  @section('content')
+ <a href="{{route('posts.index')}}" class="btn btn-danger">Back</a>
+
     <form>
     <div class="form-group">
         <label for="exampleInputEmail1">Title</label>
