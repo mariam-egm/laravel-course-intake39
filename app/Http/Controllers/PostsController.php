@@ -9,7 +9,7 @@ class PostsController extends Controller
     public function index()
     {
         return view('posts.index',[
-            'myName' => 'Ahmed Moahamed'
+            'myName' => 'Ahmed Mohamed',
         ]);
     }
 }
