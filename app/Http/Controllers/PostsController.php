@@ -23,9 +23,16 @@ class PostsController extends Controller
         ]);
     }
 
-    public function store()
+    public function store(Request $request)
     {
-        Post::create(request()->all());
+        $request->validate([
+            'title' => 'required|min:3',
+            'description' => 'required'
+        ],[
+            'title.required' => 'ay 7aga',
+            'title.min' => 'minimum chars'
+        ]);
+        Post::create($request->all());
 
         return redirect()->route('posts.index');
     }
