@@ -24,8 +24,9 @@ class PostsController extends Controller
         ]);
     }
 
-    public function store(StorePostRequest $request)
+    public function store(Request $request)
     {
+        dd($request->all());
         Post::create($request->all());
 
         return redirect()->route('posts.index');

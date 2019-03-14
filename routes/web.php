@@ -22,6 +22,7 @@ Route::group(['middleware' => 'auth'], function () {
 
     Route::get('/posts/create', 'PostsController@create')
     ->name('posts.create')
+   
     ;
 
     Route::post('/posts', 'PostsController@store')
