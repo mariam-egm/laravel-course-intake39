@@ -20,11 +20,12 @@ class PostResource extends JsonResource
             'description' => $this->description,
             'created_at' => $this->created_at->toDateString(),
             'user_id' => $this->user_id,
-            'user' => [
-                'id' => $this->user->id,
-                'name' => $this->user->name,
-                'email' => $this->user->email,
-            ],
+            // 'user' => [
+            //     'id' => $this->user->id,
+            //     'name' => $this->user->name,
+            //     'email' => $this->user->email,
+            // ],
+            'user' => new UserResource($this->user),
         ];
     }
 }
