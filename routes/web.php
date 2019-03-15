@@ -17,7 +17,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::group([], function () {
+Route::group(['middleware' => 'auth'], function () {
     Route::get('/posts', 'PostsController@index')
     ->name('posts.index')
     ;
